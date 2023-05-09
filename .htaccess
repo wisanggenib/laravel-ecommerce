@@ -1,0 +1,8 @@
+Options -Multiviews
+
+RewriteEngine On
+
+RewriteRule ^(web_admin)($|/) - [L]
+RewriteRule ^(assets)($|/) - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [L]
